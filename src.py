@@ -16,7 +16,6 @@ while True:
 
     mojangdata = requests.get(f'https://api.mojang.com/users/profiles/minecraft/{IGN}').json()
     link = f"https://api.hypixel.net/player?key={key}&uuid={mojangdata['id']}"
-    print(link)
     apidata = requests.get(link).json()
 
     Wins = (apidata["player"]["stats"]["Bedwars"]["wins_bedwars"])
